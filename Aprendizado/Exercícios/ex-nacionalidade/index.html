@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: rgb(151, 151, 221);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+        main{
+            margin: auto;
+            max-width: 600px;
+            min-width: 350px;
+            padding: 20px;
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        input{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        input#ver{
+            background-color: green;
+            font-weight: bold;
+        }
+
+        div#res{
+            padding-top: 30px;
+        }
+
+        strong{
+            color: rgb(19, 80, 57);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Controle de nacionalidade</h1>
+        Onde você nasceu? <input type="text" id="nac">
+        <input type="button" value="Verificar" onclick="verificar()" id="ver">
+        <div id="res">
+        </div>
+    </main>
+
+    <script>
+        function verificar() {
+            var p = window.document.querySelector('input#nac')
+            var veri = window.document.querySelector('input#ver')
+            var res = window.document.querySelector('div#res')
+            var pais = String(p.value)
+            res.innerHTML = `- Nasceu no ${pais}`
+
+            if (pais == 'Brasil' || pais == 'brasil'){
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong></p>`
+            }else{
+                res.innerHTML += ` então você é estrangeiro`
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>
