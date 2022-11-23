@@ -1,25 +1,43 @@
 @charset "UTF-8";
 
 body{
-    background-color: rgb(94, 131, 250);
-    color: whitesmoke;
+    background-color: rgb(160, 160, 214);
 }
 
-header{
-     text-align: center;
+h1{
+    text-align: center;
+    color: white;
+    font-size: 3em;
 }
 
 section{
-    margin: auto;
     background-color: whitesmoke;
-    color: black;
+    margin: auto;
     padding: 10px;
-    width: 500px;
-    border-radius: 20px;
-
+    border: 0.5px solid black;
+    border-radius: 10px;
+    max-width: 600px;
+    min-width: 250px;
 }
 
-footer{
-    text-align: center;
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
 
+input#button{
+    background-color: rgb(11, 53, 11);
+    color: white;
+    cursor: pointer;
+}
+
+input#button:hover{
+    background-color: rgb(16, 145, 16);
+    color: white;
+}
+
+p{
+    font-weight: bold;
 }
